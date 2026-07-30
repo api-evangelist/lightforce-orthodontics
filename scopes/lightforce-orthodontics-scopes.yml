@@ -1,0 +1,51 @@
+generated: '2026-07-19'
+method: searched
+source: https://id.lightforceortho.com/.well-known/openid-configuration
+docs: https://id.lightforceortho.com/.well-known/openid-configuration
+notes: These are the scopes advertised by LightForce's Auth0 identity tenant via OIDC
+  discovery. They are the standard OpenID Connect scope and claim set — LightForce publishes
+  no product/API-specific scope reference, and no public API whose operations these would
+  authorize. Recorded as the real, verbatim advertised scope surface only.
+schemes:
+- name: LightForceOIDC
+  source: well-known/lightforce-orthodontics-openid-configuration.json
+  issuer: https://id.lightforceortho.com/
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://id.lightforceortho.com/authorize
+    tokenUrl: https://id.lightforceortho.com/oauth/token
+scopes:
+- scope: openid
+  description: Request an ID token; indicates an OpenID Connect authentication request.
+  standard: openid-connect-core
+- scope: profile
+  description: Access to the end-user's default profile claims.
+  standard: openid-connect-core
+- scope: offline_access
+  description: Request a refresh token for access when the user is not present.
+  standard: openid-connect-core
+- scope: email
+  description: Access to the end-user's email address.
+  standard: openid-connect-core
+- scope: email_verified
+  description: Whether the end-user's email address has been verified.
+- scope: name
+  description: End-user's full name.
+- scope: given_name
+  description: End-user's given (first) name.
+- scope: family_name
+  description: End-user's family (last) name.
+- scope: nickname
+  description: End-user's casual name.
+- scope: picture
+  description: URL of the end-user's profile picture.
+- scope: phone
+  description: Access to the end-user's phone number.
+  standard: openid-connect-core
+- scope: address
+  description: Access to the end-user's postal address.
+  standard: openid-connect-core
+- scope: created_at
+  description: Timestamp the end-user's account was created.
+- scope: identities
+  description: Linked identity-provider identities for the end-user (Auth0 extension).

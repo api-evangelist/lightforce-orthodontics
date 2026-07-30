@@ -1,0 +1,47 @@
+generated: '2026-07-19'
+method: searched
+source: live probe of /.well-known/ across LightForce public hosts
+hosts:
+- host: https://id.lightforceortho.com
+  role: identity provider (Auth0 tenant)
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: lightforce-orthodontics-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: lightforce-orthodontics-oauth-authorization-server.json
+  - path: /.well-known/jwks.json
+    status: 200
+    note: JSON Web Key Set; not archived (rotating keys)
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://lf.co
+  role: marketing website
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://www.lightforceortho.com
+  role: legacy website (301 redirects to lf.co)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /llms.txt
+    status: 404
+notes: LightForce publishes no security.txt and no API catalog. The only well-known discovery
+  surface is the Auth0-hosted identity tenant, which serves standard OIDC and RFC 8414
+  authorization-server metadata.

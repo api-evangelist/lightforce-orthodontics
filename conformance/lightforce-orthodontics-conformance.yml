@@ -1,0 +1,47 @@
+generated: '2026-07-19'
+method: derived
+source: well-known/lightforce-orthodontics-openid-configuration.json
+notes: LightForce publishes no public API specification, so cross-cutting API standards
+  cannot be asserted. The conformance recorded here is limited to the identity surface its
+  Auth0 tenant genuinely advertises via discovery metadata.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: authorization/token endpoints and grant types published at
+    https://id.lightforceortho.com/.well-known/openid-configuration
+- id: oidc
+  conforms: true
+  evidence: OpenID Connect discovery document served with issuer, userinfo_endpoint and
+    id_token signing metadata
+- id: rfc8414-authorization-server-metadata
+  conforms: true
+  evidence: /.well-known/oauth-authorization-server returns 200 with authorization-server
+    metadata
+- id: rfc7636-pkce
+  conforms: true
+  evidence: code_challenge_methods_supported includes S256
+- id: rfc8628-device-authorization-grant
+  conforms: true
+  evidence: device_authorization_endpoint published and urn:ietf:params:oauth:grant-type:device_code
+    in grant_types_supported
+- id: rfc8693-token-exchange
+  conforms: true
+  evidence: urn:ietf:params:oauth:grant-type:token-exchange in grant_types_supported
+- id: rfc7591-dynamic-client-registration
+  conforms: true
+  evidence: registration_endpoint published at https://id.lightforceortho.com/oidc/register
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on all LightForce hosts
+- id: fapi
+  conforms: false
+  evidence: no FAPI profile advertised; implicit grant and plain PKCE still permitted
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: no public API specification published
+- id: openapi
+  conforms: false
+  evidence: no OpenAPI/Swagger specification published
+- id: fhir
+  conforms: false
+  evidence: no FHIR resources or endpoints published despite the healthcare sector

@@ -1,0 +1,45 @@
+# LightForce Orthodontics
+
+> LightForce Orthodontics manufactures 3D-printed, patient-specific orthodontic brackets — "generative braces" — generated from each patient's digital treatment plan and printed in the United States. It sells to orthodontic practices, not to developers: there is no public developer portal, API reference, SDK, or machine-readable API specification. The only publicly reachable programmable surface is its Auth0-hosted identity tenant, which serves standard OpenID Connect and OAuth 2.0 discovery documents.
+
+## APIs
+
+LightForce publishes no public API. Do not assume an integration surface exists.
+
+## Identity
+
+- [OpenID Connect discovery](https://id.lightforceortho.com/.well-known/openid-configuration): OIDC metadata for the LightForce identity tenant (issuer https://id.lightforceortho.com/)
+- [OAuth 2.0 authorization server metadata](https://id.lightforceortho.com/.well-known/oauth-authorization-server): RFC 8414 metadata
+- [JWKS](https://id.lightforceortho.com/.well-known/jwks.json): JSON Web Key Set
+- [Doctor Portal login](https://id.lightforceortho.com/): authenticated portal for orthodontic practices
+
+## Docs
+
+- [Website](https://lf.co/): product overview for doctors and patients
+- [Support Center](https://kb.lightforceortho.com/en/): knowledge base for practices
+- [Doctor Resources](https://lf.co/doctors/resources): clinical and practice resources
+- [Get Started](https://lf.co/doctors/get-started): onboarding for orthodontic practices
+- [Blog](https://lf.co/blog): company blog
+- [Press & Media](https://lf.co/press-media): press coverage and media assets
+
+## Legal
+
+- [Terms of Service](https://lf.co/legal/terms)
+- [Privacy Policy](https://lf.co/legal/privacy)
+- [HIPAA Privacy](https://lf.co/legal/hipaa)
+- [Cookies Policy](https://lf.co/legal/cookies)
+
+## API Evangelist artifacts
+
+- [APIs.json](https://raw.githubusercontent.com/api-evangelist/lightforce-orthodontics/refs/heads/main/apis.yml)
+- authentication/lightforce-orthodontics-authentication.yml: identity profile derived from OIDC discovery
+- scopes/lightforce-orthodontics-scopes.yml: advertised OIDC scope surface
+- conformance/lightforce-orthodontics-conformance.yml: standards conformance of the identity surface
+- well-known/lightforce-orthodontics-well-known.yml: probed /.well-known/ surface
+- security/lightforce-orthodontics-domain-security.yml: probed TLS/HSTS/DNS posture
+
+## Notes
+
+- No OpenAPI, AsyncAPI, GraphQL, or gRPC definitions are published.
+- No first-party SDKs or CLI exist; the GitHub org (https://github.com/lightforceortho) contains only forks of third-party open-source projects.
+- No security.txt, vulnerability disclosure program, trust center, status page, changelog, or sandbox is published.
