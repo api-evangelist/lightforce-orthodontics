@@ -1,8 +1,29 @@
 aid: lightforce-orthodontics
 name: LightForce Orthodontics
-description: 'LightForce Orthodontics is a company surfaced as a portfolio company of kleiner-perkins
-  and added to the API Evangelist network as a stub for enrichment. Sector: healthcare. This profile is
-  a lead awaiting the enrichment pipeline.'
+description: 'LightForce Orthodontics is a Burlington, Massachusetts medical device manufacturer that
+  produces 3D-printed, patient-specific orthodontic brackets marketed as "generative braces". Its
+  LightBracket, LightTray indirect-bonding and LightTray Turbo products are generated from each
+  patient''s digital orthodontic treatment plan and printed in the United States, giving orthodontists
+  micron-level control across six dimensions and letting them preview the projected outcome before
+  treatment begins. LightForce sells to orthodontic practices rather than to developers: doctors work
+  through a Doctor Portal and a hosted knowledge base, and the company publishes no public developer
+  portal, API reference, SDKs or machine-readable API specification. The only publicly reachable
+  programmable surface is its Auth0-hosted identity tenant at id.lightforceortho.com, which serves
+  standard OpenID Connect and OAuth 2.0 authorization-server discovery documents. Backed by Kleiner
+  Perkins.'
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/69aec45d4fb611242f119860/69e9d73bdc029cbaa9bc1429_Logo%20Image%20Cover.png
 url: https://raw.githubusercontent.com/api-evangelist/lightforce-orthodontics/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +33,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Healthcare
+- Orthodontics
+- Medical Devices
+- Dental
+- 3D Printing
+- Manufacturing
+- Identity
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,4 +51,37 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.lightforceortho.com
+  url: https://lf.co/
+- type: Portal
+  url: https://id.lightforceortho.com/
+- type: Support
+  url: https://kb.lightforceortho.com/en/
+- type: Blog
+  url: https://lf.co/blog
+- type: SignUp
+  url: https://lf.co/doctors/get-started
+- type: Login
+  url: https://id.lightforceortho.com/
+- type: TermsOfService
+  url: https://lf.co/legal/terms
+- type: PrivacyPolicy
+  url: https://lf.co/legal/privacy
+- type: GitHubOrganization
+  url: https://github.com/lightforceortho
+- type: WellKnown
+  url: well-known/lightforce-orthodontics-well-known.yml
+- type: Authentication
+  url: authentication/lightforce-orthodontics-authentication.yml
+- type: OAuthScopes
+  url: scopes/lightforce-orthodontics-scopes.yml
+- type: Conformance
+  url: conformance/lightforce-orthodontics-conformance.yml
+- type: DomainSecurity
+  url: security/lightforce-orthodontics-domain-security.yml
+- type: LLMsTxt
+  url: llms/lightforce-orthodontics-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
