@@ -11,6 +11,17 @@ description: 'LightForce Orthodontics is a Burlington, Massachusetts medical dev
   programmable surface is its Auth0-hosted identity tenant at id.lightforceortho.com, which serves
   standard OpenID Connect and OAuth 2.0 authorization-server discovery documents. Backed by Kleiner
   Perkins.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
